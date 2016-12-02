@@ -20,3 +20,9 @@ for file in /home/chenlihu/*
      echo $file
    fi
  done
+
+# c 风格的for循环
+for ((i=0;i<10;i++))
+ do
+ 	echo $i
+ done
