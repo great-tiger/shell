@@ -35,3 +35,23 @@ funWithParam(){
     echo "The string of the parameters is $* !"  # 传递给函数的所有参数
 }
 funWithParam 1 2 3 4 5 6 7 8 9 34 73
+
+
+# 获取函数返回值的第三种方法
+function db1(){
+        read -p "Enter a number :" value
+        echo $[ $value * 2 ]
+}
+
+result=`db1`
+
+echo "result is :" $result
+
+# 输出结果 注意 echo $[ $value * 2 ] 这个 echo 的结果并没有输出到STDOUT上
+# Enter a number :3
+# result is : 6
+
+
+# 在函数中定义局部变量 需要在变量前增加 local 关键字
+
+

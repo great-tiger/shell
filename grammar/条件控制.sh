@@ -56,7 +56,12 @@ else
 	echo "I don't konw you"
 fi
 
-
+#符合条件控制
+if [ -n "$0" ] && [ -n "$1" ]  &&  [ -n "$2" ];then
+  echo "`basename $0` $1 $2"
+else
+  echo "you did not identify yourself."
+fi
 
 
 
